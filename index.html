@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Anniversary!</title>
+    <title>Happy 3rd Anniversary!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -45,12 +45,18 @@
             background-clip: text;
             color: transparent;
             animation: titleGlow 3s infinite alternate;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-out forwards 0.5s;
         }
 
         .subtitle {
             font-size: 1.5rem;
             margin-bottom: 30px;
             color: #e0b1cb;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-out forwards 1s;
         }
 
         .years-container {
@@ -66,6 +72,9 @@
             position: relative;
             box-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
             animation: pulse 4s infinite;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1.5s ease-out forwards 1.5s;
         }
 
         .years {
@@ -77,43 +86,12 @@
             color: transparent;
         }
 
-        /* Photo Gallery */
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .photo {
-            border-radius: 10px;
-            overflow: hidden;
-            height: 150px;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .photo:hover img {
-            transform: scale(1.1);
-        }
-
-        .photo:hover::after {
-            content: "❤️";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .name {
             font-size: 2rem;
-            z-index: 2;
+            margin-top: 20px;
+            color: #ff69b4;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards 2s;
         }
 
         /* Message Section */
@@ -124,6 +102,9 @@
             margin: 30px 0;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 20, 147, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-out forwards 2.5s;
         }
 
         .message-title {
@@ -161,6 +142,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards 3s;
         }
 
         .btn:hover {
@@ -181,6 +164,8 @@
             padding: 20px;
             background: rgba(255, 105, 180, 0.1);
             border-radius: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards 3.5s;
         }
 
         .counter-title {
@@ -222,6 +207,8 @@
             font-size: 1rem;
             border-top: 1px solid rgba(255, 20, 147, 0.2);
             margin-top: 30px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards 4s;
         }
 
         /* Animations */
@@ -256,6 +243,20 @@
             }
         }
 
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             .title {
@@ -275,8 +276,8 @@
                 height: 150px;
             }
             
-            .photo-gallery {
-                grid-template-columns: repeat(2, 1fr);
+            .name {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -290,24 +291,16 @@
             <h1 class="title">Happy Anniversary!</h1>
             <p class="subtitle">Celebrating our journey together</p>
             <div class="years-container">
-                <div class="years">5</div>
+                <div class="years">3</div>
             </div>
             <p class="subtitle">Years of Love & Happiness</p>
+            <div class="name">Ashi ❤️</div>
         </header>
-        
-        <div class="photo-gallery">
-            <div class="photo"><img src="https://images.unsplash.com/photo-1530785602389-d07526b5b060?q=80&w=500" alt="Couple"></div>
-            <div class="photo"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=500" alt="Romantic"></div>
-            <div class="photo"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=500" alt="Together"></div>
-            <div class="photo"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500" alt="Love"></div>
-            <div class="photo"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=500" alt="Smile"></div>
-            <div class="photo"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500" alt="Happy"></div>
-        </div>
         
         <div class="message-section">
             <h2 class="message-title">To My Dearest</h2>
             <p class="message">
-                Five years ago, we began this beautiful journey together. Every moment with you has been a blessing, 
+                Three years ago, we began this beautiful journey together. Every moment with you has been a blessing, 
                 filled with laughter, love, and unforgettable memories. Through all the ups and downs, our love has 
                 only grown stronger. You are my best friend, my partner, and my greatest adventure. Here's to many 
                 more years of love, happiness, and togetherness. I love you more than words can express.
@@ -316,18 +309,12 @@
         
         <div class="interactive-section">
             <button class="btn" id="heartsBtn">
-                <i class="fas fa-heart"></i> Send Hearts
-            </button>
-            <button class="btn" id="messageBtn">
-                <i class="fas fa-envelope"></i> Love Note
-            </button>
-            <button class="btn" id="musicBtn">
-                <i class="fas fa-music"></i> Play Music
+                <i class="fas fa-heart"></i> Heart Fall
             </button>
         </div>
         
         <div class="heart-counter">
-            <h3 class="counter-title">Hearts Sent</h3>
+            <h3 class="counter-title">Hearts Collected</h3>
             <div class="counter" id="heartCounter">0</div>
         </div>
     </div>
@@ -362,13 +349,18 @@
             }, duration * 1000);
         }
         
-        // Create hearts periodically
-        setInterval(createHeart, 300);
+        // Create initial hearts when page loads
+        window.addEventListener('load', () => {
+            // Initial heart shower
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    createHeart();
+                }, i * 100);
+            }
+        });
         
         // Interactive buttons functionality
         const heartsBtn = document.getElementById('heartsBtn');
-        const messageBtn = document.getElementById('messageBtn');
-        const musicBtn = document.getElementById('musicBtn');
         const heartCounter = document.getElementById('heartCounter');
         let count = 0;
         
@@ -389,34 +381,6 @@
             setTimeout(() => {
                 heartCounter.style.transform = 'scale(1)';
             }, 300);
-        });
-        
-        messageBtn.addEventListener('click', () => {
-            const messages = [
-                "I love you to the moon and back!",
-                "You mean everything to me.",
-                "My heart belongs to you forever.",
-                "Every day with you is a blessing.",
-                "You're my happily ever after.",
-                "I fall for you more every day."
-            ];
-            
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            alert(randomMessage);
-        });
-        
-        musicBtn.addEventListener('click', () => {
-            // Toggle music button icon
-            const icon = musicBtn.querySelector('i');
-            if (icon.classList.contains('fa-music')) {
-                icon.classList.remove('fa-music');
-                icon.classList.add('fa-volume-up');
-                alert("Romantic music is playing now! 🎵");
-            } else {
-                icon.classList.remove('fa-volume-up');
-                icon.classList.add('fa-music');
-                alert("Music stopped");
-            }
         });
         
         // Add hearts when user taps anywhere

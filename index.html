@@ -2,15 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Mobile Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Anniversary ❤️</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Hello 👋</h1>
-    <p>Welcome to my mobile-friendly website!</p>
-    <button onclick="alert('Thanks for visiting!')">Click Me</button>
+    <h1 class="glow">💖 Happy Anniversary 💖</h1>
+    <p class="message">Wishing you both a lifetime of love, laughter, and togetherness. 🥂</p>
+    
+    <div class="hearts">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+
+    <button onclick="showMessage()">Click for Surprise</button>
+    
+    <p id="secret" class="hidden">💌 Your love is truly inspiring. Cheers to many more! 💫</p>
   </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("secret").classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>

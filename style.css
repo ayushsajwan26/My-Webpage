@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ffdee9, #b5fffc);
@@ -100,3 +100,4 @@ button:hover {
   50% { transform: rotate(-45deg) translateY(-10px); }
   100% { transform: rotate(-45deg) translateY(0); }
 }
+ */
